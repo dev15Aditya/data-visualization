@@ -7,11 +7,14 @@ const Flavanoids = ({ dataset }) => {
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
+    // Grouping data for "Alcohol" attribute
     const groupedData = dataset.reduce((acc, curr) => {
       const { Alcohol, Flavanoids } = curr;
       if (!acc[Alcohol]) {
         acc[Alcohol] = [];
       }
+
+      // Pushing Flavanoids values to the corresponding group
       acc[Alcohol].push(Flavanoids);
       return acc;
     }, {});
@@ -21,6 +24,7 @@ const Flavanoids = ({ dataset }) => {
       groupedData[Alcohol].sort((a, b) => a - b);
     }
 
+    // Calculating mean, median and mode for each group
     const newData = Object.keys(groupedData).map((Alcohol) => {
       const mean =
         Math.round(calculateMean(groupedData[Alcohol]) * 1000) / 1000;
@@ -31,9 +35,11 @@ const Flavanoids = ({ dataset }) => {
       const mode =
         Math.round(calculateMode(groupedData[Alcohol]) * 1000) / 1000;
 
+      // Returning object containing Alcohol, mean, median and mode of curr. group
       return { Alcohol, mean, median, mode };
     });
 
+    // Updating state with new data
     setTableData(newData);
   }, [dataset]);
 
