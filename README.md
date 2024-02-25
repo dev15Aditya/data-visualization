@@ -34,7 +34,7 @@ The project is structured as follows:
 
 To run the project locally, follow these steps:
 
-1. Clone this repository: `git clone <https://github.com/dev15Aditya/data-visualization.git>`
+1. Clone this repository: `git clone https://github.com/dev15Aditya/data-visualization.git`
 2. Navigate to the project directory: `cd data-visualization-app`
 3. Install dependencies: `yarn install`
 4. Start the development server: `yarn start`
