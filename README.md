@@ -35,7 +35,7 @@ The project is structured as follows:
 To run the project locally, follow these steps:
 
 1. Clone this repository: `git clone https://github.com/dev15Aditya/data-visualization.git`
-2. Navigate to the project directory: `cd data-visualization-app`
+2. Navigate to the project directory: `cd data-vapp`
 3. Install dependencies: `yarn install`
 4. Start the development server: `yarn start`
 
@@ -46,5 +46,3 @@ The application will be available at `http://localhost:3000` in your browser.
 - The `Flavanoids.js` component displays statistics related to Flavanoids.
 - The `GammaTable.js` component displays statistics related to the Gamma property.
 - The project uses utility functions from the `utils` directory to calculate mean, median, mode, and Gamma.
-
-# data-visualization
